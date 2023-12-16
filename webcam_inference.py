@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 
 # Load the pre-trained MobileNetV2 model
-model = tf.keras.models.load_model('path_to_your_fruit_model.h5')
+model = tf.keras.models.load_model('trainedModel.h5')
 
 # Initialize the webcam
 cap = cv2.VideoCapture(0)
