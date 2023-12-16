@@ -51,18 +51,18 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 model.fit(train_generator, epochs=10, validation_data=test_generator)
 
 # 4. Inference
-def predict_fruit(image_path):
-    image = load_img(image_path, target_size=(224, 224))
-    image = img_to_array(image) / 255.0
-    image = tf.expand_dims(image, axis=0)
-    
-    prediction = model.predict(image)
-    predicted_class = tf.argmax(prediction, axis=1).numpy()
-    
-    # Map class index to class label
-    class_labels = list(train_generator.class_indices.keys())
-    return class_labels[predicted_class[0]]
-
+#def predict_fruit(image_path):
+#    image = load_img(image_path, target_size=(224, 224))
+#    image = img_to_array(image) / 255.0
+#    image = tf.expand_dims(image, axis=0)
+#    
+#    prediction = model.predict(image)
+#    predicted_class = tf.argmax(prediction, axis=1).numpy()
+#    
+#    # Map class index to class label
+#    class_labels = list(train_generator.class_indices.keys())
+#    return class_labels[predicted_class[0]]
+#
 # Example usage:
 # image_path = "path_to_your_image.jpg"
 # print(predict_fruit(image_path))
