@@ -66,7 +66,7 @@ model.fit(train_generator, epochs=10, validation_data=test_generator,callbacks=[
 print("Training done")
 
 # Save the trained model
-model_path = "fruits_model2.h5"
+model_path = "trainedModel.h5"
 model.save(model_path)
 print("MODEL GENERATED AND SAVED")
 
